@@ -1,9 +1,7 @@
 package com.blurb.particles;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.ArrayList;
+
 
 /**
  *
@@ -11,19 +9,23 @@ package com.blurb.particles;
  */
 
 
-public class ParticleSystem
-{
-   private int workerThreads = 1;
-   private ArrayList<Particle>[] particles;
+public class ParticleSystem {
 
-   ParticleSystem(int workerThreads)
-   {
-	  this.workerThreads = workerThreads;
-	  particles = new ArrayList<>()[workerThreads];
+    private int workerThreads = 1;
+    private ArrayList<ArrayList<Particle>> particles = new ArrayList<>();
 
-   }
-   ParticleSystem()
-   {
-	  particles = new ArrayList<>()[workerThreads];
-   }
+    ParticleSystem(int workerThreads) {
+        this.workerThreads = workerThreads;
+        for (int x = 0; x < workerThreads; x++) {
+            particles.add(new ArrayList<Particle>());
+        }
+    }
+    ParticleSystem() {
+        for (int x = 0; x < workerThreads; x++) {
+            particles.add(new ArrayList<Particle>());
+        }
+    }
+    public void update(){
+        
+    }
 }
