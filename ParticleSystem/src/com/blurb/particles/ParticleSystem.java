@@ -7,8 +7,23 @@ package com.blurb.particles;
 
 /**
  *
- * @author Maddison
+ * @author Joshua Waring
  */
-public class ParticleSystem {
-    
+
+
+public class ParticleSystem
+{
+   private int workerThreads = 1;
+   private ArrayList<Particle>[] particles;
+
+   ParticleSystem(int workerThreads)
+   {
+	  this.workerThreads = workerThreads;
+	  particles = new ArrayList<>()[workerThreads];
+
+   }
+   ParticleSystem()
+   {
+	  particles = new ArrayList<>()[workerThreads];
+   }
 }
