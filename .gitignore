@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+/ParticleSystem/nbproject/private/
+/ParticleSystem/build/

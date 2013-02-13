@@ -69,7 +69,7 @@ public class WorkerThreads implements Runnable {
 				  
 				  // update gravity here
 				  yv += 0.1f;
-                                  float angle2d = (float) (Math.atan2(x - gx, y - gy) / Math.PI * 180);
+                                 // float angle2d = (float) (Math.atan2(x - gx, y - gy) / Math.PI * 180);
                                  // xv += -(Math.sin(angle2d * Math.PI / 180) / 30) ;
                                  // yv += -(Math.cos(angle2d * Math.PI / 180) / 30) ;
 
