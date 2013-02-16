@@ -48,8 +48,8 @@ public class ParticleSystem {
             try {
                 for(int index = 0; index<particles.size();index++){
 				   cacheParticle = particles.get(index);
-				   output.write(cacheParticle.x);
-				   output.write(cacheParticle.y);
+				   output.write(converter.IntToByte(cacheParticle.x));
+				   output.write(converter.IntToByte(cacheParticle.y)); 
 				   output.write(converter.FloatToByte(cacheParticle.xv));
 				   output.write(converter.FloatToByte(cacheParticle.yv));
 				}

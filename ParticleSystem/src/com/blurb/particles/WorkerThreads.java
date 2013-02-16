@@ -55,12 +55,16 @@ public class WorkerThreads implements Runnable {
         while(running){
             // check input stream
             try {
-			   if( (int) (Byte = (byte) input.read()) != -1){
-				  input.read(tempByte4);
+			   if(input.available() >= 4){
+                                  System.out.println(input.available());
+				  input.read(tempByte0); 
+                                  System.out.println(input.available());
 				  input.read(tempByte1);
+                                  System.out.println(input.available());
 				  input.read(tempByte2);
+                                  System.out.println(input.available());
 				  input.read(tempByte3);
-				  tempByte0 = push(tempByte4, Byte);
+                                  System.out.println(input.available()); 
 				  
 				  x = converter.ByteToInt(tempByte0);
 				  y = converter.ByteToInt(tempByte1);
